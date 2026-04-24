@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ka">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>გიორგი და ანა</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Noto+Serif+Georgian:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"></script>
+    </head>
+    <body>
+        <div id="desktop-notice" aria-hidden="true">
+            <div class="dn-card">
+                <img src="weddsite.png" alt="Weddsite" class="dn-logo">
+                <p class="dn-title">გახსენით მობილურზე</p>
+                <p class="dn-body">მოსაწვევი შექმნილია მობილური მოწყობილობისთვის. გთხოვთ, გახსნათ სმარტფონზე.</p>
+            </div>
+        </div>
+        <div id="scene">
+            <div
+                id="envelope"
+                role="button"
+                tabindex="0"
+                aria-label="გახსენით კონვერტი  ( კონვერტს შეეხეთ )"
+            >
+                <div class="env-flap"></div>
+                <div class="env-left"></div>
+                <div class="env-right"></div>
+                <div class="env-bottom"></div>
+                <img class="env-seal" src="seal.png" alt="">
+                <img class="env-flower env-flower--left" src="flowers-1.png" alt="">
+                <img class="env-flower env-flower--center" src="flowers-3.png" alt="">
+                <img class="env-flower env-flower--right" src="flowers-2.png" alt="">
+                <div id="letter">
+                    <div class="letter-body">
+                        <p class="l-eyebrow">გეპატიჟებით ჩვენს ქორწილში</p>
+                        <h1 class="l-names">
+                            გიორგი
+                            <span class="l-amp">&</span>
+                            ანა
+                        </h1>
+                        <p class="l-date">25 · 04 · 2026</p>
+                        <div class="l-rule"></div>
+                        <p class="l-venue">რესტორანი კრისტალ პლაზა</p>
+                    </div>
+                </div>
+            </div>
+            <p id="hint" aria-hidden="true">გახსენით კონვერტი <br /> ( კონვერტს შეეხეთ )</p>
+            <div id="butterfly-1" class="butterfly butterfly--left">
+                <dotlottie-player
+                    src="butterfly 01.lottie"
+                    autoplay
+                    loop
+                    style="width:65px;height:65px;display:block"
+                ></dotlottie-player>
+            </div>
+            <div id="butterfly-2" class="butterfly butterfly--right">
+                <dotlottie-player
+                    src="butterfly 04.lottie"
+                    autoplay
+                    loop
+                    style="width:65px;height:65px;display:block"
+                ></dotlottie-player>
+            </div>
+            <div id="butterfly-3" class="butterfly butterfly--left2">
+                <dotlottie-player
+                    src="butterfly 01.lottie"
+                    autoplay
+                    loop
+                    style="width:65px;height:65px;display:block"
+                ></dotlottie-player>
+            </div>
+            <div id="butterfly-4" class="butterfly butterfly--right2">
+                <dotlottie-player
+                    src="butterfly 04.lottie"
+                    autoplay
+                    loop
+                    style="width:65px;height:65px;display:block"
+                ></dotlottie-player>
+            </div>
+        </div>
+        <audio
+            id="bg-audio"
+            src="music.mp3"
+            loop
+            preload="none"
+        ></audio>
+        <button
+            id="music-toggle"
+            class="music-toggle--hidden"
+            aria-label="მუსიკა"
+            aria-pressed="false"
+        >
+            <span class="music-toggle__track">
+                <span class="music-toggle__thumb">
+                    <svg
+                        class="music-toggle__note"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M9 18V6l12-2v12"
+                            stroke="currentColor"
+                            stroke-width="1.6"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            fill="none"
+                        />
+                        <circle
+                            cx="6"
+                            cy="18"
+                            r="3"
+                            fill="currentColor"
+                        />
+                        <circle
+                            cx="18"
+                            cy="16"
+                            r="3"
+                            fill="currentColor"
+                        />
+                    </svg>
+                    <svg
+                        class="music-toggle__pause"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <rect
+                            x="6"
+                            y="5"
+                            width="4"
+                            height="14"
+                            rx="1"
+                            fill="currentColor"
+                        />
+                        <rect
+                            x="14"
+                            y="5"
+                            width="4"
+                            height="14"
+                            rx="1"
+                            fill="currentColor"
+                        />
+                    </svg>
+                </span>
+            </span>
+        </button>
+        <button
+            id="night-toggle"
+            class="night-toggle--hidden"
+            aria-label="Toggle night mode"
+            role="switch"
+            aria-checked="false"
+        >
+            <span class="night-toggle__track">
+                <span class="night-toggle__thumb">
+                    <span class="night-toggle__icon--sun">☀️</span>
+                    <span class="night-toggle__icon--moon">🌙</span>
+                </span>
+            </span>
+        </button>
+        <img id="top-flowers" src="bottom-flowers.png" alt="">
+        <img id="bottom-flowers" src="bottom-flowers.png" alt="">
+        <div id="invitation" aria-hidden="true">
+            <div class="inv-sky-day"></div>
+            <div class="inv-sky-night"></div>
+            <img class="inv-clouds" src="clouds.png" alt="">
+            <img class="inv-clouds-night" src="clouds-night.png" alt="">
+            <img class="inv-building" src="building.png" alt="">
+            <img class="inv-building-night" src="building-night.png" alt="">
+            <div class="inv-card">
+                <p class="l-eyebrow">გეპატიჟებით ჩვენს ქორწილში</p>
+                <h1 class="l-names">
+                    გიორგი
+                    <span class="l-amp">&</span>
+                    ანა
+                </h1>
+                <p class="l-date">25 · 04 · 2026</p>
+                <div class="l-rule"></div>
+                <p class="l-venue">რესტორანი კრისტალ პლაზა</p>
+                <a href="#rsvp" class="inv-cta">დაადასტურეთ დასწრება</a>
+            </div>
+        </div>
+        <section id="message">
+            <div class="cd-inner">
+                <p class="cd-eyebrow">დარჩენილია</p>
+                <div class="cd-timer">
+                    <div class="cd-unit">
+                        <span class="cd-num" id="cd-days">00</span>
+                        <span class="cd-label">დღე</span>
+                    </div>
+                    <span class="cd-sep">:</span>
+                    <div class="cd-unit">
+                        <span class="cd-num" id="cd-hours">00</span>
+                        <span class="cd-label">საათი</span>
+                    </div>
+                    <span class="cd-sep">:</span>
+                    <div class="cd-unit">
+                        <span class="cd-num" id="cd-minutes">00</span>
+                        <span class="cd-label">წუთი</span>
+                    </div>
+                    <span class="cd-sep">:</span>
+                    <div class="cd-unit">
+                        <span class="cd-num" id="cd-seconds">00</span>
+                        <span class="cd-label">წამი</span>
+                    </div>
+                </div>
+            </div>
+            <div class="house-wrap">
+                <img class="house-img" src="house.png" alt="">
+                <img class="house-img-night" src="house-night.png" alt="">
+            </div>
+            <div class="msg-inner">
+                <p class="msg-eyebrow"><b>სიყვარულით გეპატიჟებით ჩვენს ქორწილში!</b></p>
+                <div class="msg-rule"></div>
+                <p class="msg-body"> გვსურს, ეს ჩვენთვის უმნიშვნელოვანესი დღე თქვენთან ერთად გავატაროთ. <br /> 
+					<br />
+					<b>თარიღი:</b> 2026 წლის 25 აპრილი
+					<br />
+					<b>დასაწყისი:</b> 18:00 საათი
+					<br />
+					<br />
+					<i>გელოდებით, რათა ერთად აღვნიშნოთ ჩვენი ახალი ცხოვრების დასაწყისი!</i>
+				</p>
+                <div class="msg-rule"></div>
+                <p class="msg-names">
+                    გიორგი
+                    <span class="l-amp">&amp;</span>
+                    ანა
+                </p>
+            </div>
+            <div>
+                <img id="bottom-flowers2" src="./bottom-flowers2.png" alt="">
+            </div>
+        </section>
+        <section id="rsvp">
+            <div class="rsvp-inner">
+                <p class="rsvp-eyebrow">დადასტურება</p>
+                <h2 class="rsvp-title">მობრძანდებით ?</h2>
+                <div class="msg-rule"></div>
+                <form id="rsvp-form" novalidate>
+                    <div class="rsvp-field">
+                        <label class="rsvp-label" for="rsvp-name">სახელი და გვარი</label>
+                        <input
+                            class="rsvp-input"
+                            id="rsvp-name"
+                            type="text"
+                            placeholder="თქვენი სახელი"
+                            autocomplete="name"
+                        >
+                    </div>
+                    <div class="rsvp-field">
+                        <label class="rsvp-label">დაესწრებით?</label>
+                        <div class="rsvp-radio-group">
+                            <label class="radio-card">
+                                <input type="radio" name="attendance" value="yes">
+                                <span class="radio-face">დიახ, მოვალ ✓</span>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="attendance" value="no">
+                                <span class="radio-face">ვერ მოვალ ✗</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="rsvp-field" id="guest-count-field">
+                        <label class="rsvp-label" for="rsvp-guests">სტუმრების რაოდენობა</label>
+                        <input
+                            class="rsvp-input rsvp-input--narrow"
+                            id="rsvp-guests"
+                            type="number"
+                            min="1"
+                            max="10"
+                            value="1"
+                        >
+                    </div>
+                    <button class="rsvp-submit" type="submit">გაგზავნა</button>
+                </form>
+                <p class="rsvp-success" id="rsvp-success">გმადლობთ! თქვენი პასუხი მიღებულია.</p>
+            </div>
+        </section>
+        <section id="timetable">
+            <div class="tt-inner">
+                <p class="tt-eyebrow">განრიგი</p>
+                <h2 class="tt-title">საღამოს განრიგი</h2>
+                <div class="tt-divider">
+                    <span class="tt-divider__line"></span>
+                    <span class="tt-divider__diamond"></span>
+                    <span class="tt-divider__line"></span>
+                </div>
+                <ol class="tt-list">
+                    <li
+                        class="tt-item"
+                        data-icon="🌸"
+                        data-time="18:00"
+                        data-title="სტუმრების მიღება"
+                        data-desc="სტუმრები ესალმებიან ერთმანეთს."
+                    >
+                        <span class="tt-time">18:00</span>
+                        <span class="tt-dot"></span>
+                        <span class="tt-label">სტუმრების მიღება</span>
+                        <button class="tt-info" aria-label="დეტალები">+</button>
+                    </li>
+                    <li
+                        class="tt-item"
+                        data-icon="💍"
+                        data-time="19:00"
+                        data-title="საქორწინო ცერემონია"
+                        data-desc="მეფე-პატარძალი სიყვარულისა და ერთგულების ფიცს დებს."
+                    >
+                        <span class="tt-time">19:00</span>
+                        <span class="tt-dot"></span>
+                        <span class="tt-label">საქორწინო ცერემონია</span>
+                        <button class="tt-info" aria-label="დეტალები">+</button>
+                    </li>
+                    <li
+                        class="tt-item"
+                        data-icon="🥂"
+                        data-time="20:00"
+                        data-title="სადღეგრძელო სუფრა"
+                        data-desc="სუფრა სავსე კულინარიული სიამოვნებებით - ქართული სამზარეულო და ღვინო."
+                    >
+                        <span class="tt-time">20:00</span>
+                        <span class="tt-dot"></span>
+                        <span class="tt-label">სადღეგრძელო სუფრა</span>
+                        <button class="tt-info" aria-label="დეტალები">+</button>
+                    </li>
+                    <li
+                        class="tt-item"
+                        data-icon="🎶"
+                        data-time="22:00"
+                        data-title="ცეკვა და მუსიკა"
+                        data-desc="მუსიკა და ცეკვა! ზეიმი მხიარულად გაგრძელდება!"
+                    >
+                        <span class="tt-time">22:00</span>
+                        <span class="tt-dot"></span>
+                        <span class="tt-label">ცეკვა და მუსიკა</span>
+                        <button class="tt-info" aria-label="დეტალები">+</button>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <section id="venue-map">
+            <div class="map-inner">
+                <p class="map-eyebrow">ლოკაცია</p>
+                <h2 class="map-title">რესტორანი კრისტალ პლაზა</h2>
+                <!-- <p class="map-address">ბახტრიონის ქ. 5 · თბილისი</p> -->
+                <div class="map-divider">
+                    <span class="map-divider__line"></span>
+                    <span class="map-divider__diamond"></span>
+                    <span class="map-divider__line"></span>
+                </div>
+                <div class="map-frame">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2148.674009326172!2d44.747430674679315!3d41.472635171289085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4043fbc3daf73f15%3A0x56ad2a614caa8128!2sCrystal%20Plaza!5e1!3m2!1sen!2sge!4v1777041384322!5m2!1sen!2sge"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="რესტორანი კრისტალ პლაზა"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+        <footer id="site-footer">
+                <img src="weddsite.png" alt="Weddsite" class="footer-logo">
+                <span class="footer-text">დიდი სიყვარულით თქვენი გიორგი და ანა 💖 </span>
+
+        </footer>
+        <!-- Timetable modal -->
+        <div
+            id="tt-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-hidden="true"
+        >
+            <div class="tt-modal__overlay"></div>
+            <div class="tt-modal__card">
+                <button class="tt-modal__close" aria-label="დახურვა">&times;</button>
+                <p class="tt-modal__icon"></p>
+                <p class="tt-modal__time"></p>
+                <p class="tt-modal__title"></p>
+                <p class="tt-modal__desc"></p>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
