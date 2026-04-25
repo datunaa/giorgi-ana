@@ -261,5 +261,3 @@
   });
 
 }());
-
-import { Analytics } from "@vercel/analytics/next"
